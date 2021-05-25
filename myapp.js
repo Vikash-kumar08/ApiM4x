@@ -5,6 +5,7 @@ const mongoose=require('mongoose');
 mongoose.connect('mongodb://localhost/users');
 var bodyParser = require('body-parser');
 let db=mongoose.connection;
+const uri = process.env.MONGODB_URI;
 require('dotenv').config();
 //checking connection
 db.once('open',function(){
